@@ -1,0 +1,605 @@
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../font/CenturyGothic.ttf') format('truetype');
+  src: url('../font/gothic.eot') format('eot'),;
+  src: url('../font/gothic.woff') format('woff');
+}
+
+
+
+*{
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  min-height: 1000px;
+  background: #121116;
+  font-family: CenturyGothic;
+  font-weight: normal;
+
+}
+
+/* Navbar section */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 80px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky{
+  background: #121116;
+  padding: 1% 5%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  margin: auto;
+ 
+}
+header .logo{
+  width: 30%;
+  float: right;
+  margin-right: 8%;
+}
+header .navigations{
+  position: relative;
+  display: flex;
+}
+header .navigations li{ 
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigations li a {
+  text-decoration: none;
+  color: #fff; 
+  font-size: 17px;
+}
+header.sticky .navigations li a {
+  color: #ffffff;
+}
+header .navigations li a.active {
+  background-color: transparent;
+  color: #EDB60D;
+} 
+header .navigations li a:hover{
+  color: #EDB60D;
+}
+.navigations a::after {
+  content: "";
+  position: static;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #EDB60D;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.navigations a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+/*-----------------------------------------------*/
+/* Main-Page */
+section{
+  padding: 120px 0px;
+}
+
+.main-body{
+  width: 100%;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  
+}
+
+.titleText h2{
+  color: #ffffff;
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 2%;
+  font-family: CenturyGothic;
+  font-weight: 600;
+}
+
+.titleText .bio-title span {
+  color: #EDB60D;
+  font-size: 1.2em;
+}
+.bio{
+  width: 90%;
+  height: auto;
+  max-height: 100%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bio .bio-content{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bio-content .bio-photo{
+  min-width: 40%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, rgba(237, 182, 13, 0) ,  rgba(237, 182, 13, 0), rgba(237, 182, 13, 0), rgba(237, 182, 13, 0), 
+      #EDB60D, #EDB60D, rgba(237, 182, 13, 0), rgba(237, 182, 13, 0), rgba(237, 182, 13, 0), rgba(237, 182, 13, 0)
+    ) 8%; 
+    border-radius: 256px;
+  
+
+}
+
+.bio-content .bio-photo .photo{
+ 
+ width: 90%;
+ height: 60vh;
+ background: url('../assets/Team/Peekay.jpg'), #C4C4C4;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ border-radius: 256px;
+
+}
+
+.bio-about .animate__animated.animate__fadeInUp {
+  --animate-duration: 2s;
+}
+
+.bio-content .bio-about{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: CenturyGothic;
+  font-weight: normal;
+}
+
+.bio-content .bio-about h2{
+  color: #EDB60D;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: Center;
+  letter-spacing: 5%;
+}
+
+.bio-content .bio-about p{
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 30px;
+  text-align:center;
+  letter-spacing: 2%;
+  color: #fff;
+
+
+}
+
+.bio-content .bio-button{
+  display: flex;
+  Width: 220px;
+  Height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-button a{
+  color: #000000;
+  background: #EDB60D;
+  display: inline-block;
+  font-family: CenturyGothic;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.bio-button .btn:hover{
+  letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.footer-logo img{
+  width: 8%;
+
+}
+.footer .btn{
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.footer .btn:hover{
+  color: #EDB60D;
+  background-color: transparent;
+}
+.footer .copyright {
+  text-align:center;
+  font-size:18px;
+  color:rgb(156, 156, 156);
+} 
+
+
+/* Media Queries */
+@media (max-width: 1199px){
+
+  header{
+    padding: 30px 60px;
+  }
+    
+  header .logo{
+    width: 30%;
+    margin-right: 8%;
+  }
+  header .navigations{
+    margin-top: 2%;
+    margin-left: -2%;
+  }
+  header .navigations li a {
+    font-size: 16px;
+  }
+
+  .titleText .documentary-title{
+    font-size: 1rem;
+  }
+  
+  .footer-content .footer-logo img{
+    width: 20%;  
+  }
+    
+  .titleText h2{
+    font-size: 2em;
+  }
+  
+  .titleText .gallerytext span {
+    color: #EDB60D;
+    font-size: 1.5em;
+  }
+
+  .bio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    padding: 0;
+    
+  }
+
+  .bio .bio-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  .bio-content .bio-photo { 
+    max-width: 50%;
+  }
+
+  .bio-content .bio-photo .photo{
+    height: 60vh;
+  }
+ 
+  .bio-content .bio-about{
+    margin-left: 5%;
+    flex: 2;  
+  }
+  .bio-content .bio-about p{
+    font-size: 0.95rem;
+    line-height: 25px;
+    text-align:center;
+    line-break:normal;
+  }
+
+ .footer-logo img{
+  
+    width: 16%;
+     
+  }
+
+  .footer-basic .social > a {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2rem;
+    width: 5%;
+    height: 10vh;
+    border-radius:40%;
+    margin:0 0.5%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 991px){
+  header, header.sticky{
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header .logo{
+    width: 20%;
+    float: left;   
+  }
+
+  header .navigations{
+    display: none;
+  }
+
+  .menuToggle{
+    z-index: 1;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    background: url(../assets/Logo/menuicon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+  }
+
+  .menuToggle.active{
+    background: url(../assets/Logo/close-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  header .navigations.active{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #121116f8;
+  }
+
+  header .navigations li{
+    margin-left: 0;
+  }
+
+  header .navigations li a{
+    color: #fff; 
+    font-size: 1.2em;
+   
+  }
+
+  header .navigations li a.active {
+    font-weight: normal;
+    color: #fff;
+  } 
+
+  .navigations .hr {
+    width: 80%;
+    color: #EDB60D;
+    border: 0.5px solid #EDB60D;
+    margin: 3%;
+  }
+
+  .grid-documentary{
+    width: 90%;
+    padding: 2% 8%;
+    
+  
+  }
+
+  .titleText .documentary-title{
+    font-size: 1rem;
+  }
+  
+  .footer-content .footer-logo img{
+    width: 40%;
+  }
+  
+  
+  
+  .titleText h2{
+    font-size: 2em;
+    
+  }
+  
+  .titleText .gallerytext span {
+    color: #EDB60D;
+    font-size: 1.5em;
+  }
+
+  .bio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    padding: 0;
+    
+  }
+
+  .bio .bio-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  .bio-content .bio-photo { 
+   
+    width: 50%;
+    margin: 0 0 0 5%;
+    flex: 2;   
+  }
+
+ 
+ 
+  .bio-content .bio-about{
+    margin-left: 5%;
+    flex: 2;  
+  }
+  .bio-content .bio-about p{
+    font-size: 0.9rem;
+    line-height: 25px;
+  }
+
+  .footer-logo img{
+    width: 10%;
+  
+  }
+
+  .footer-basic .social > a {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2rem;
+    width: 5%;
+    height: 10vh;
+    border-radius:40%;
+    margin:0 0.5%;
+    padding: 10px;
+  }
+
+
+  
+}
+
+@media screen and (max-width: 800px) {
+  .bio .bio-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .bio-content .bio-photo{
+    width: 50%;  
+  }
+  
+  .bio-content .bio-photo .photo{
+   width: 90%;
+   height: 70vh;  
+  }
+
+  .bio-content .bio-about p{
+    font-size: 1.2rem;
+    line-height: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 600px){
+
+  header .logo {
+    width: 40%;
+  }
+
+
+  .menuToggle {
+    width: 150px;
+    height: 40px;
+    
+  }
+  .titleText h2{
+    font-size: 2em;
+    margin-top: -5%;
+  }
+
+  header .navigations li a{
+    font-size: 1em;
+   
+  }
+  .navigations .hr {
+    width: 75%;
+    margin: 5% 0;
+  }
+
+  header .navigations li a.active {
+    font-weight: normal;
+    color: #fff;
+  } 
+  .titleText h2{
+    font-size: 1.5em;
+    
+  }
+  .bio .bio-content{
+    width: 100%;
+  
+  }
+  .bio-content .bio-photo{
+    min-width: 70%;
+    min-height: 55vh;
+ 
+  
+  }
+
+  
+  
+  .bio-content .bio-photo .photo{
+   
+   min-width: 90%;min-height: 40vh;
+ 
+   height: 50vh;
+  }
+    
+  .bio-content .bio-about{
+    width: 90%;   
+  }
+  
+  .bio-content .bio-about h2{
+    font-size: 20px;
+  
+  }
+  
+  .bio-content .bio-about p{
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .bio-content .bio-button{
+    Width: 200px;
+    Height: 40px;
+  }
+
+  .footer-logo img{
+    width: 18%;
+  
+  }
+
+  .footer .copyright {
+    font-size:14px;
+  } 
+ 
+}
