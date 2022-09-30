@@ -153,7 +153,7 @@ section{
 }
 
 .contact-mobile{
-  background: linear-gradient(to bottom right, rgba(5, 5, 5, 0.95), rgba(5, 5, 5, 0.6)), url('../assets/partners/contact-bg.png');
+  background: linear-gradient(to bottom right, rgba(5, 5, 5, 0.95), rgba(5, 5, 5, 0.6)), url('../assets/other/contact-bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -242,7 +242,7 @@ hr {
     position: relative;
     width: 100px;
     height: 40px;
-    background: url(../assets/Logo/menuicon.png);
+    background: url('../assets/other/menuicon.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,7 +251,7 @@ hr {
   }
 
   .menuToggle.active{
-    background: url(../assets/Logo/close-icon.png);
+    background: url('../assets/other/close-icon.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -282,11 +282,11 @@ hr {
   }
   header .navigations li a.active {
     font-weight: normal;
-    color: #fff;
+    /* color: #fff; */
     
   } 
   .navigations .hr {
-    width: 80%;
+    width: 50%;
     color: #EDB60D;
     border: 0.5px solid #EDB60D;
     margin: 3%;
@@ -349,7 +349,7 @@ hr {
 @media only screen and (max-width: 600px) {
 
   html, body{
-    background: linear-gradient( rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.8)), url('../assets/partners/contact-moile-bg.png');
+    background: linear-gradient( rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.8)), url('../assets/other/contact-moile-bg.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -375,6 +375,9 @@ hr {
     height: 40px;
     
   }
+
+  
+
   .titleText h2{
     font-size: 2em;
     margin-top: -5%;
@@ -391,7 +394,7 @@ hr {
 
   header .navigations li a.active {
     font-weight: normal;
-    color: #fff;
+    /* color: #fff; */
   } 
   .titleText h2{
     font-size: 1.5em;

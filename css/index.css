@@ -127,10 +127,10 @@ body,html{
   height: 100vh;
   min-height: 1000px;
   background: no-repeat center center scroll;
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -o-background-size: cover; */
+  /* background-size: 90px; */
 }
 
 .carousel-inner .carousel-item > img {
@@ -181,14 +181,15 @@ body,html{
   }
 
   .menuToggle{
+    z-index: 99;
     position: fixed;
     right: 0;
     top: 20px;
     justify-content: right; 
-    margin-right: 10%;
+    /* margin-right: 10%; */
     width: 100px;
     height: 40px;
-    background: url(../assets/Logo/menuicon.png);
+    background: url('../assets/other/menuicon.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -197,7 +198,7 @@ body,html{
   }
 
   .menuToggle.active{
-    background: url(../assets/Logo/close-icon.png);
+    background: url('../assets/other/close-icon.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -224,7 +225,7 @@ body,html{
 
   .navbar .navigations li a{
     color: #fff; 
-    font-size: 1.6em;
+    font-size: 1.2em;
   }
 
   .navigations .hr {
@@ -244,7 +245,7 @@ body,html{
 
 @media (max-width: 600px) {
   body{
-    background: url('../assets/Slide/hbdmama.jpg');
+    background: url('../assets/Slide/hbdmama.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -257,7 +258,7 @@ body,html{
   }
 
   .mylogo .logo{
-    width: 35%;
+    width: 40%;
     float: left; 
     margin: 6% 6% ;  
   }
@@ -283,10 +284,13 @@ body,html{
     margin: 5%;
   }
 
+  .menuToggle.active {
+    background-size: 20px;
+  }
   .menuToggle{
     width: 25px;
     height: 30px;
-    background-size: 25px;
+    background-size: 20px;
     z-index: 9999;
     position: fixed;
     right: 0;
@@ -298,7 +302,7 @@ body,html{
   }
   .navbar .navigations li a.active {
     font-weight: normal;
-    color: #ffffff;
+    /* color: #ffffff; */
     
   } 
   
